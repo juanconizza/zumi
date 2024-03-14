@@ -15,9 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Enviar el correo electrónico
     if (mail($destinatario, $asunto, $mensaje, $cabeceras)) {
-        echo "Thank you! will be in contact soon.";
+        echo "OK";
     } else {
-        echo "Error!, try again.";
+        echo "An error occurred, please try again later.";
     }
 } else {
     // Si se accede directamente a este script, redirigir a la página del formulario
