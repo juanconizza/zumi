@@ -91,18 +91,21 @@
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
+  let backToTopElements = document.querySelectorAll('.back-to-top, .back-to-top-wp');
+
+  backToTopElements.forEach(backtotop => {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
-        backtotop.classList.add('active')
+        backtotop.classList.add('active');
       } else {
-        backtotop.classList.remove('active')
+        backtotop.classList.remove('active');
       }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
+    };
+  
+    window.addEventListener('load', toggleBacktotop);
+    window.addEventListener('scroll', toggleBacktotop);
+  });
+  
 
   /**
    * Mobile nav toggle

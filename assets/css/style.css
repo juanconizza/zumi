@@ -2108,11 +2108,12 @@ section {
   text-decoration: none;
 }
 
-.whatsapp-float {
+.whatsapp-float  {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 15px;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
   right: 80px;
   background-color: #25d366;
   color: #fff;
@@ -2121,10 +2122,17 @@ section {
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s;
 }
 
-.whatsapp-float:hover {
-  background-color: #128c7e;
+.whatsapp-float:hover, .social-links a:hover{
+  background-color: #25d366;
+  color: #fff;
   transform: scale(1.1);
 }
+
+.back-to-top-wp.active {
+  visibility: visible;
+  opacity: 1;
+}
+
